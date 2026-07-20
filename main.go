@@ -3,11 +3,11 @@ package main
 import (
 	"database/sql"
 	"embed"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
@@ -95,6 +95,6 @@ func main() {
 		ReadHeaderTimeout: 5 * 60,
 	}
 
-	log.Printf(fmt.Sprintf("Serving on port: %s\n", port))
+	log.Print("Serving on port: %s\n", strconv.Quote(port))
 	log.Fatal(srv.ListenAndServe())
 }
