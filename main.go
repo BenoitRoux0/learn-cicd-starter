@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"fmt"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
